@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const dbConnection = require('./config/db');
 const blogRoutes = require('./routes/blogsRoute');
+const bodyParser= require('body-parser');
 
 const app = express();
 const port = 8000;
@@ -12,6 +13,7 @@ app.use(cors());
 // used for sending json body in the request
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(bodyParser.json());
 
 app.use('/blog', blogRoutes);
 

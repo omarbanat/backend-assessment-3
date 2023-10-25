@@ -6,8 +6,7 @@ const blogsSchema = new Schema({
   publisher: { type: String, required: true },
   category: { type: String, required: true },
   body: { type: String, required: true },
-  keyword: String,
-  timestamps: true
+  keyword:{type :String,required:true},
 });
 
 const Blog = model('Blogs', blogsSchema);
@@ -16,7 +15,7 @@ module.exports = Blog;
 
 
 
-const mongoose = require('mongoose');
+
 
 
 
